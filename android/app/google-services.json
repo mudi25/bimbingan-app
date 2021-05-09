@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "991841552940",
+    "project_id": "bimbimngan-skripsi-terpadu",
+    "storage_bucket": "bimbimngan-skripsi-terpadu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:991841552940:android:0092060b79e8450de61f89",
+        "android_client_info": {
+          "package_name": "com.example.bimbingan_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "991841552940-u7lkjefekf6q8a5ob0h1ndhm6i5cnq5r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXqh9eH5FlTOdoiy5anOJJNezw7deMy9I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "991841552940-u7lkjefekf6q8a5ob0h1ndhm6i5cnq5r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
