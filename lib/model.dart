@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
+const BaseImage =
+    "https://storage.googleapis.com/bimbimngan-skripsi-terpadu.appspot.com/";
+
 @immutable
 class ModelUser {
   final String id;
@@ -17,6 +20,7 @@ class ModelUser {
   final String fakultas;
   final String roles;
   final String? fcmToken;
+  final String imageUrl;
   final int timestamp;
 
   ModelUser({
@@ -29,6 +33,7 @@ class ModelUser {
     required this.jurusan,
     required this.fakultas,
     required this.roles,
+    required this.imageUrl,
     required this.fcmToken,
     required this.timestamp,
   });
@@ -42,6 +47,7 @@ class ModelUser {
         jurusan: doc.get('jurusan'),
         nomorHp: doc.get('nomorHp'),
         password: doc.get('password'),
+        imageUrl: doc.get('imageUrl'),
         roles: doc.get('roles'),
         timestamp: doc.get('timestamp'),
         username: doc.get('username'),

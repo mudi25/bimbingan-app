@@ -32,7 +32,12 @@ dependencies:
   timeago: ^3.0.2
   intl: ^0.17.0
   cupertino_icons: ^1.0.2
-  sliding_up_panel: ^2.0.0+1
+  image_picker: ^0.7.5
+  path: ^1.8.0
+  uuid: ^3.0.4
+  firebase_storage: ^8.0.6
+  firebase_messaging: ^9.1.4
+  flutter_local_notifications: ^5.0.0+4
 
 dev_dependencies:
   flutter_test:
