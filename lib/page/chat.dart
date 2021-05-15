@@ -27,42 +27,40 @@ class PageChat extends StatelessWidget {
                   .map((e) => ModelChat.fromDocumentSnapshot(e))
                   .toList()),
           builder: (_, snap) {
-            if (snap.connectionState == ConnectionState.active) {
-              final data = snap.data;
-              if (data != null) {
-                return Column(
-                  children: [
-                    Expanded(
-                      child: ListView.builder(
-                        itemCount: data.length,
-                        itemBuilder: (_, i) => Container(
-                          alignment: data[i].getAligment(user),
-                          child: Card(
-                            color: data[i].getColors(user),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsets.only(left: 15),
-                                  child: Text(data[i].sendByName(info)),
-                                ),
-                                ListTile(
-                                  title: Text(data[i].message),
-                                  subtitle: Text(data[i].timetext),
-                                )
-                              ],
-                            ),
+            final data = snap.data;
+            if (data != null) {
+              return Column(
+                children: [
+                  Expanded(
+                    child: ListView.builder(
+                      itemCount: data.length,
+                      itemBuilder: (_, i) => Container(
+                        alignment: data[i].getAligment(user),
+                        child: Card(
+                          color: data[i].getColors(user),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(left: 15),
+                                child: Text(data[i].sendByName(info)),
+                              ),
+                              ListTile(
+                                title: Text(data[i].message),
+                                subtitle: Text(data[i].timetext),
+                              )
+                            ],
                           ),
                         ),
                       ),
                     ),
-                    _CreateChat(
-                      collection: "skripsi/${info.skripsi.id}/chat",
-                      idUser: user.id,
-                    ),
-                  ],
-                );
-              }
+                  ),
+                  _CreateChat(
+                    collection: "skripsi/${info.skripsi.id}/chat",
+                    idUser: user.id,
+                  ),
+                ],
+              );
             }
             return Container(
               child: LinearProgressIndicator(),
